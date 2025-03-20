@@ -19,14 +19,13 @@ function App() {
             } else {
               setIsBreak(false);
               setTimeLeft(1500);
-              alert(" It's work Time")
             }
             setRunning(false);
             return 0;
           }
           return prevTimeLeft - 1;
         });
-      }, 10);
+      }, 1000);
     } else {
       clearInterval(intervalRef.current);
       intervalRef.current = null;
@@ -44,8 +43,8 @@ function App() {
       intervalRef.current = null;
       setRunning(false); 
 
-      setIsBreak(true);   
-      setTimeLeft(300);  
+      setIsBreak(false);   
+      setTimeLeft(1500);  
       startTimer();       
     }
   }
